@@ -41,6 +41,9 @@ class Dev(Configuration):
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
     CRISPY_TEMPLATE_PACK = "bootstrap5"
+    
+    # The list of IP address that are allowed to use DjDT
+    INTERNAL_IPS = ["192.168.11.179"]
 
 
     # Application definition
@@ -52,6 +55,7 @@ class Dev(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'debug_toolbar',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
@@ -65,6 +69,7 @@ class Dev(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
     #     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
     ROOT_URLCONF = 'blango.urls'
