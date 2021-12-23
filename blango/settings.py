@@ -44,6 +44,10 @@ class Dev(Configuration):
     
     # The list of IP address that are allowed to use DjDT
     INTERNAL_IPS = ["192.168.11.179"]
+    
+    
+    # Custom User Model
+    AUTH_USER_MODEL = "blango_auth.User"
 
 
     # Application definition
@@ -56,6 +60,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'debug_toolbar',
+        'blango_auth',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
