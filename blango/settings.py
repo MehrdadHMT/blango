@@ -61,6 +61,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.sites',
         'django.contrib.staticfiles',
+        'django_registration,
         'debug_toolbar',
         'blango_auth',
         'blog',
